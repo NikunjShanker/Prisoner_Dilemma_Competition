@@ -181,13 +181,12 @@ class Competition:
  
 class Competitor:
     def __init__(self):
-        self.points = 0
         self.num = 0
         self.opp_num = 0
         self.competition = None
 
     def __str__(self):
-        return "unnamed"
+        return "sample"
 
     def set_num(self, num):
         self.num = num
@@ -195,9 +194,6 @@ class Competitor:
 
     def select_play(self):
         pass
-
-    def add_points(self, point_total):
-        self.points += point_total
 
 
 def import_all_classes_from_folder(folder_name):
