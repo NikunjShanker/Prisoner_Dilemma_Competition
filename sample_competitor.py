@@ -10,6 +10,7 @@ Author's Note:
     'base_competitor_scripts' folder to gain inspiration and mimic their algorithm structure.
 """
 
+# TODO: Rename this file and this class.
 class SampleCompetitor(Competitor):
     def select_play(self):
         round_num = self.competition.round_num              # The number of the current round (ranges from 0 to 9).
@@ -22,11 +23,11 @@ class SampleCompetitor(Competitor):
         round_winners[i] = -1 means that neither you nor your opponent won the i-th round
         round_winners[i] = 2 means that both you and your opponent won the i-th round
         """
-        
-        # TODO: put your algorithm implementation here
+
+        # TODO: Put your algorithm implementation here. This function must return a 0 or 1
         pass
 
     def __str__(self):
-        # TODO: rename this
+        # TODO: Rename this returned string.
         return "yournamehere"
     
