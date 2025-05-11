@@ -3,6 +3,8 @@ from competition import Competitor
 class ChatGPTCompetitor(Competitor):
     def select_play(self):
         """
+        Designed by AI.
+        
         Cooperative for the first three rounds, then in the following order:
             - Aggressive if the opponent is aggressive
             - Aggressive if the opponent is mostly aggressive with a 25% chance of being forgiving
