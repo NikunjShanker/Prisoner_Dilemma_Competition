@@ -24,7 +24,7 @@ class SampleCompetitor(Competitor):
         round_winners[i] = 2 means that both you and your opponent won the i-th round
         """
 
-        # TODO: Put your algorithm implementation here. This function must return a 0 or 1
+        # TODO: Put your algorithm implementation here. This function must return either a 0 or 1.
         pass
 
     def __str__(self):
