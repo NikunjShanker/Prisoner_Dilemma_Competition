@@ -86,7 +86,7 @@ class Competition:
             winner = 2
         elif f_points == s_points:
             winner = 0
-        self.output_match(first_comp, second_comp, winner)
+        self.output_match(first_comp, second_comp, f_points, s_points, winner)
 
     def output_intro(self):
         print("\n\n")
@@ -99,7 +99,7 @@ class Competition:
 
         print("\n\n")
 
-    def output_match(self, first_comp, second_comp, winner):
+    def output_match(self, first_comp, second_comp, f_points, s_points, winner):
         # Calculate different in competitor names
         first_name = str(first_comp)
         second_name = str(second_comp)
@@ -130,6 +130,10 @@ class Competition:
                 else:
                     result = "+"
             results_str += result
+        
+        # Add the point tags to the result strings
+        first_plays_str += f" - {f_points} points"
+        second_plays_str += f" - {s_points} points"
 
         # Add the win tags to the result strings
         if winner == 1:
@@ -212,7 +216,7 @@ def import_all_classes_from_folder(folder_name):
     
 
 if __name__ == "__main__":
-    classes = import_all_classes_from_folder("competitor_scripts")
+    classes = { **import_all_classes_from_folder("base_competitor_scripts"), **import_all_classes_from_folder("submitted_competitor_scripts") }
     competitors = [cls() for cls in classes.values()]
     competition = Competition(competitors)
     for competitor in competitors:
